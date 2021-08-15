@@ -1,7 +1,7 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-let itemWidth;
+let itemWidth= Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
 window.addEventListener('resize', function(){
    itemWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
 });
