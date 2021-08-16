@@ -1,7 +1,9 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-
-const itemWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+let itemWidth= Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+window.addEventListener('resize', function(){
+   itemWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+});
 const sliderMain = $(".slider-main");
 const sliderItem = $$(".slider-item");
 let prevBtn = $(".btn-prev");

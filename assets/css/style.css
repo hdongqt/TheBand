@@ -37,13 +37,14 @@ html{
 }  
 .header__menu-item--link{
     color: var(--white-color);
+    display: inline-block;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
+    height: 46px;
     line-height: 46px;
     padding: 0 23px;
     text-transform: uppercase;
-    display: block;
 }  
 .header__menu-item:hover .header__menu-item--link{
     background-color: #ccc;
@@ -283,16 +284,17 @@ html{
 }
 .card-list{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 32px 0;
     margin-left: -16px;
+    flex-wrap: wrap;
 }
 .card-item{
     background-color: var(--white-color);
-    margin: 0 16px;
+    margin-left: 16px;;
     display: flex;
     flex-direction: column;
-    width:calc(100%/3)
+    width: calc((100% / 3) - 16px);
 }
 .card-img{
     display: block;
@@ -442,3 +444,8 @@ html{
     color: var(--white-color);
     padding: 10px;
 }
+ @media (max-width: 739px) {
+    .card-item{
+        width: calc(100% - 16px);
+    }
+} 
